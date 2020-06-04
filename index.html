@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   
   
@@ -32,12 +33,20 @@
     </div>
 
     <div id="usage">
-      <div id="whatyouveused">You’ve used <span>815</span>GB of your storage</div>
+      <div id="whatyouveused">You’ve used <span id="usedAmnt">815</span> GB of your storage</div>
+    <div id="progress-bar">
+      <div id="progress">
 
-      <div id="remaining">185 GB Left</div>
-      
-      0 GB
-      1000 GB
+      </div>
+    </div>
+      <div id="range">
+        <div id="empty"> 0 GB </div>
+        <div id="full">1000 GB</div>
+      </div>
+      <div id="remaining">
+        <span id="specificAmntRemaining">185</span>
+        <span>GB Left</span>
+        </div>
     </div>
   </main>
 </body>
