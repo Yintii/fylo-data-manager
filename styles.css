@@ -5,14 +5,7 @@ html, body{
     font-weight: 400, 700;
     background-image: url("./images/bg-mobile.svg");
     background-repeat: no-repeat;
-    background-size: auto;
-    color:white;
-}
-
-main{
-    display:flex;
-    flex-flow: row nowrap;
-    height: 100%;
+    background-size: stretch;
 }
 #titlecard{
     margin: 30% 5% 10% 5%;
@@ -21,7 +14,6 @@ main{
     border-radius: 10px;
     border-top-right-radius: 100px;
 }
-
 #icons{
     display: flex;
     flex-flow: row nowrap;
@@ -56,7 +48,7 @@ main{
 }
 
 #progress-bar{
-    border: solid 1px black;
+    border: solid 2px white;
     margin: 5% 0 1% 0;
     border-radius: 25px;
 }
@@ -71,9 +63,8 @@ main{
 }
 #bobble{
     align-self: center;
-
     height: 85%;
-    width: 20px;
+    width: 17px;
     border-radius: 25px;
     margin: 0 2px 0 2px;
     background-color: white;
@@ -87,6 +78,7 @@ main{
     margin-top:2%;
     color: hsl(243, 100%, 93%);
 }
+
 #remaining{
     position: relative;
     top:3em; left: 3em;
@@ -105,3 +97,35 @@ main{
 }
 
 
+@media only screen and (min-width: 375px){
+    html, body{
+        background-color: hsl(229, 57%, 11%);
+        background-image: none;
+        height:100%;
+    }
+    main{
+        padding:10%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    #titlecard{
+        margin:0;
+        padding: 2%;
+        background-color:hsl(228, 56%, 26%);
+        border-radius: 10px;
+        border-top-right-radius: 100px;
+        width: 40%;
+    }
+    #usage{
+        width: 50%;
+        border-radius: 10px;
+        margin: 0;
+        background-color:hsl(228, 56%, 26%);
+        padding: 2%;
+        text-align: center;
+        z-index: -1;
+    }
+    
+    
+}
