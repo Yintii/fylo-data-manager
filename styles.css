@@ -157,8 +157,8 @@ html, body{
         color: hsl(229, 7%, 55%);
     }
     #remaining{
-        position: absolute;
-        top:100%; left: 75%;
+        position: relative;
+        top: 10px;
         display:flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
