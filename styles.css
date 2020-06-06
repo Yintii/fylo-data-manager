@@ -3,8 +3,13 @@ html, body{
     margin:0;
     font-family: 'Raleway', sans-serif;
     font-weight: 400, 700;
-    background-image: url("./images/bg-mobile.svg");
     background-repeat: no-repeat;
+}
+#app{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;left:0;
 }
 #titlecard{
     margin: 30% 5% 10% 5%;
@@ -20,7 +25,6 @@ html, body{
     align-content: center;
     margin-top: 5%;
     width:50%;
-    
 }
 .icon{
     padding: 7% 7% 4% 7%;
@@ -93,24 +97,43 @@ html, body{
 #specificAmntRemaining{
     font-size: 18pt;
 }
+#mobBg{
+    position: relative;
+    height:100%;
+    z-index: -1;
+}
+#deskBg{
+    display:none;
+}
 
 
 @media only screen and (min-width: 376px){
+    #mobBg{
+        display:none;
+    }
+    #deskBg{
+        display:block;
+        position: absolute;
+        width:100%;
+        bottom:0;left:0;
+        
+        z-index: 0;
+    }
     html, body{
-        background-color: #0C132E;
-        background-image: url('./images/bg-desktop.svg');
-        background-size: contain;
-        background-position: bottom;
         height: 100%;
+        width:100vw;
+        background-color: #0C122C;
+        z-index: -1;
     }
     #app{
-        width: 80%;
+        width: 75%;
+        height:auto;
         margin: auto;
         display:flex;
-        flex-flow: row nowrap;
-        padding-top: 15%;
-        justify-content: center;
+        position: absolute;
+        top:25%;left: 15%;
     }
+
     #titlecard{
         margin: 0 5% 0 0 ;
         padding: 3%;
@@ -122,6 +145,7 @@ html, body{
     #usage{
         width: 100%;
         border-radius: 10px;
+        height: 150px;
         margin: 0;
         padding: 2%;
         text-align: center;
@@ -133,17 +157,27 @@ html, body{
         color: hsl(229, 7%, 55%);
     }
     #remaining{
-        position: relative;
-        top:-250px; left: 10em;
+        position: absolute;
+        top:100%; left: 75%;
         display:flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
-        width:35%;
+        width:25%;
         background-color: white;
         color:black;
         text-align: center;
-        padding: 2% 5%;
+        padding: 2% 2%;
         border-radius: 25px;
+    }
+    .icon{
+        width:100%;
+        padding: 10%;
+        border-radius: 25%;
+        margin: 1%;
+        background-color: hsl(229, 57%, 11%);
+    }
+    .icon:hover{
+        background-color: orchid;
     }
     #progress-bar{
         border: solid 2px white;
@@ -152,6 +186,9 @@ html, body{
     }
     #range{
         margin-top: 0;
+    }
+    #whatyouveused{
+        text-align: left;
     }
 
 }
